@@ -1,0 +1,41 @@
+{
+  "name": "latest-commit",
+  "version": "0.0.0",
+  "description": "Get the latest commit of a GitHub user.",
+  "license": "MIT",
+  "repository": "SamVerschueren/latest-commit",
+  "author": {
+    "name": "Sam Verschueren",
+    "email": "sam.verschueren@gmail.com",
+    "url": "github.com/SamVerschueren"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "latest",
+    "commit",
+    "github",
+    "git",
+    "gh"
+  ],
+  "dependencies": {
+    "gh-got": "^2.3.0",
+    "pinkie-promise": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
+  }
+}
