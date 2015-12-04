@@ -1,6 +1,6 @@
 {
   "name": "latest-commit",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get the latest commit of a GitHub user.",
   "license": "MIT",
   "repository": "SamVerschueren/latest-commit",
