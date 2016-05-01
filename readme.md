@@ -31,7 +31,7 @@ Returns a promise for the latest commit.
 
 Type: `string`
 
-The user to retrieve the latest commit for.
+User to retrieve the latest commit for.
 
 #### options
 
