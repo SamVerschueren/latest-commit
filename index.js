@@ -1,9 +1,8 @@
 'use strict';
-var latestPush = require('latest-push');
-var ghGot = require('gh-got');
-var Promise = require('pinkie-promise');
+const latestPush = require('latest-push');
+const ghGot = require('gh-got');
 
-module.exports = function (user, opts) {
+module.exports = (user, opts) => {
 	if (typeof user !== 'string') {
 		return Promise.reject(new TypeError('Expected a user'));
 	}
@@ -11,12 +10,9 @@ module.exports = function (user, opts) {
 	opts = opts || {};
 
 	return latestPush(user, opts)
-		.then(function (push) {
-			var commit = push.payload.commits.pop();
-
-			return ghGot('repos/' + push.repo.name + '/commits/' + commit.sha, opts);
+		.then(push => {
+			const commit = push.payload.commits.pop();
+			return ghGot(`repos/${push.repo.name}/commits/${commit.sha}`, opts);
 		})
-		.then(function (result) {
-			return result.body;
-		});
+		.then(result => result.body);
 };
